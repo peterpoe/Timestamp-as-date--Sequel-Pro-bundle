@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>author</key>
+	<string>Gregorio Magini</string>
+	<key>category</key>
+	<string>Format</string>
+	<key>command</key>
+	<string>#!/usr/bin/php
+&lt;?php
+	$timestamp = fgets(STDIN);
+	if ((string) (int) $timestamp === $timestamp) {
+		echo date('Y-m-d H:i:s', $timestamp);
+	}
+	else {
+		echo 'Not a valid timestamp.';
+		exit((int) $GLOBALS['_ENV']['SP_BUNDLE_EXIT_SHOW_AS_TEXT_TOOLTIP']);
+	}
+?&gt;</string>
+	<key>contact</key>
+	<string>tzntvav@tznvy.pbz</string>
+	<key>description</key>
+	<string>Convert a timestamp to a date string in the format Y-m-d H:i:s</string>
+	<key>input</key>
+	<string>selectedtext</string>
+	<key>input_fallback</key>
+	<string>entirecontent</string>
+	<key>internalKeyEquivalent</key>
+	<dict>
+		<key>characters</key>
+		<string>T</string>
+		<key>keyCode</key>
+		<integer>17</integer>
+		<key>modifierFlags</key>
+		<integer>1703936</integer>
+	</dict>
+	<key>keyEquivalent</key>
+	<string>~$@T</string>
+	<key>name</key>
+	<string>Format timestamp as date</string>
+	<key>output</key>
+	<string>showashtml</string>
+	<key>scope</key>
+	<string>inputfield</string>
+	<key>tooltip</key>
+	<string>Convert a timestamp to a date string in the format Y-m-d H:i:s</string>
+	<key>uuid</key>
+	<string>C569B127-7574-45DE-950F-3ADAF0AB196C</string>
+</dict>
+</plist>
